@@ -1,0 +1,43 @@
+ul li {
+  cursor: pointer;
+  background: pink;
+  width: 25%;
+}
+
+body {
+  /* padding-top: 75px; */
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background: #f6f6f6;
+  height: 10vh;
+  overflow: hidden;
+}
+
+h2 {
+  display: inline-block;
+}
+
+#search div {
+  padding: auto auto;
+}
+
+#results {
+  /* display: none; */
+}
+
+.hidden {
+  display: none;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
