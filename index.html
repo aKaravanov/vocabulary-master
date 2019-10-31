@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<!--
+  Andrei Karavanov
+  October 31, 2019
+  Gilmore AB
+
+  This is a one-page web-app that allows users to build their vocabulary for the
+  upcoming GRE/SAT.
+-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -9,74 +17,66 @@
   <body>
     <header>
       <h1>GRE Vocabulary</h1>
-
-      <ul>
+      <nav>
         <a href="#search">Home</a>
         <a href="#list">List</a>
-      </ul>
+      </nav>
     </header>
     <main>
       <section id="search">
-        <div>
-          <input type="text" name="" value="" placeholder="Find Word">
+        <div class="section content">
+          <input type="text" name="word-input" value="" placeholder="Find Word"
+            id="word-input">
           <button type="button" name="button" id="search-btn">Search</button>
+          <p id="error-message-type" class="error-message hidden">
+            Please enter a valid word!
+          </p>
+          <p id="error-message-server" class="error-message hidden">
+            There was an error connecting to the server. Please try again later!
+          </p>
+          <p id="error-message-absent" class="error-message hidden">
+            The word was not found. Try different one.
+          </p>
           <p>Powered by Thesaurus!</p>
         </div>
       </section>
+
+      <section id="word-picker" class="hidden">
+        <h2>Select One Of Words</h2>
+        <div class="section content list"></div>
+      </section>
+
       <section id="results" class="hidden">
         <h2>Select One Of Definintions</h2>
-        <ul>
-          <li onclick="">
-            <article class="definition">
-              <p>Defn</p>
-              <p>Example</p>
-            </article>
-          </li>
-
-          <li onclick="">
-            <article class="definition">
-              <p>Defn</p>
-              <p>Example</p>
-            </article>
-          </li>
-
-          <li onclick="">
-            <article class="definition">
-              <p>Defn</p>
-              <p>Example</p>
-            </article>
-          </li>
-        </ul>
+        <div class="section-main-content list"></div>
       </section>
 
       <section id="edit" class="hidden">
         <h2>Edit Entry</h2>
+        <div class="form">
+          <div class="form-entry">
+            <label for="word">Word</label>
+            <input type="text" name="word" id="word" value="">
+          </div>
+          <div class="form-entry">
+            <label for="speech">Part of speech</label>
+            <input type="text" name="speech" id="speech" value="">
+          </div>
+          <div class="form-entry">
+            <label for="definition">Definition</label>
+            <textarea rows="6" cols="50" id="definition"></textarea>
+          </div>
+          <div class="form-entry">
+            <label for="examples">Examples</label>
+            <textarea rows="10" cols="50" id="examples"></textarea>
+          </div>
+          <button type="button" name="button" id="add-btn">Add</button>
+        </div>
       </section>
 
       <section id="list">
         <h2>My List</h2>
-        <ul>
-          <li onclick="">
-            <article class="definition">
-              <p>Defn</p>
-              <p>Example</p>
-            </article>
-          </li>
-
-          <li onclick="">
-            <article class="definition">
-              <p>Defn</p>
-              <p>Example</p>
-            </article>
-          </li>
-
-          <li onclick="">
-            <article class="definition">
-              <p>Defn</p>
-              <p>Example</p>
-            </article>
-          </li>
-        </ul>
+        <div class="section content list"></div>
       </section>
     </main>
   </body>

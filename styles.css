@@ -1,43 +1,125 @@
-ul li {
-  cursor: pointer;
-  background: pink;
-  width: 25%;
-}
+/*
+  Andrei Karavanov
+  October 16, 2019
+  Gilmore, AB
+
+  This is the main stylesheet of my project. It has iniversal rulset that
+  is applicable to every single page of my project.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Aleo|Archivo+Black&display=swap');
 
 body {
-  /* padding-top: 75px; */
+  font-family: 'Aleo', serif;
 }
 
 header {
-  text-align: center;
   position: fixed;
+  top: 0;
   right: 0;
   left: 0;
-  z-index: 999;
-  background: #f6f6f6;
+  z-index: 1;
   height: 10vh;
   overflow: hidden;
 }
 
-h2 {
-  display: inline-block;
+header h1 {
+  font-family: 'Archivo Black', sans-serif;
 }
 
-#search div {
-  padding: auto auto;
-}
-
-#results {
-  /* display: none; */
+header a {
+  padding: 20px;
 }
 
 .hidden {
   display: none;
 }
 
+#search div {
+  margin-top: 40vh;
+}
+
 section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 90vh;
+  padding-top: 10vh;
+}
+
+section h2 {
+  margin: 50px auto;
+}
+
+.section.content {
+  width: 80%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.word.choice {
+  padding: 5px 20px;
+}
+
+.choice {
+  cursor: pointer;
+}
+
+.definition.choice {
+  width: 220px;
+  height: 150px;
+  padding: 5px;
+}
+
+.definition.large {
+  max-width: 400px;
+  height: 200px;
+}
+
+.form {
+  width: 500px;
+}
+
+.form-entry {
+  margin: 20px auto;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Shared */
+section h2, header, .section.content, .form {
+  text-align: center;
+}
+
+.word, .definition, .form, header {
+  background: #f6f6f6;
+}
+
+.word, .definition, .form {
+  margin: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.form input, .form label {
+  display: block;
+}
+
+.form input, section .section.content, .form {
+  margin: 0 auto;
+}
+
+.form label, .form button {
+  margin: 10px auto;
+}
+
+.word.choice, .definition.large {
+  width: auto;
 }
