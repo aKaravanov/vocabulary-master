@@ -19,7 +19,7 @@ header {
   right: 0;
   left: 0;
   z-index: 1;
-  height: 10vh;
+  height: 15vh;
   overflow: hidden;
 }
 
@@ -36,12 +36,12 @@ header a {
 }
 
 #search div {
-  margin-top: 40vh;
+  margin-top: 35vh;
 }
 
 section {
-  height: 90vh;
-  padding-top: 10vh;
+  height: 85vh;
+  padding-top: 15vh;
 }
 
 section h2 {
