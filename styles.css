@@ -9,6 +9,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Aleo|Archivo+Black&display=swap');
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 body {
   font-family: 'Aleo', serif;
 }
@@ -19,7 +23,7 @@ header {
   right: 0;
   left: 0;
   z-index: 1;
-  height: 15vh;
+  height: 10vh;
   overflow: hidden;
 }
 
@@ -40,8 +44,9 @@ header a {
 }
 
 section {
-  height: 85vh;
-  padding-top: 15vh;
+  height: 90vh;
+  padding-top: 10vh;
+  scroll-snap-align: start;
 }
 
 section h2 {
