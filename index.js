@@ -20,28 +20,7 @@
     document.getElementById("search-btn").addEventListener("click", search);
     document.getElementById("add-btn")
       .addEventListener("click", addDefinitionToList);
-    window.addEventListener('keydown', handleKey);
-    window.addEventListener('mousewheel', handleScroll);
-    window.addEventListener('DOMMouseScroll', handleScroll);
     listenToNav();
-  }
-
-  /**
-   * Set up navigation using keys
-   * @param{Event} event - event that triggered function
-   */
-  function handleKey(event) {
-    let sections = document.querySelectorAll("section:not(.hidden)");
-
-    if (event.code === "ArrowUp") {
-      // console.log("move up");
-      event.preventDefault();
-      scrollPrevious(sections);
-    } else if (event.code === "ArrowDown") {
-      // console.log("move down");
-      event.preventDefault();
-      scrollNext(sections);
-    }
   }
 
   /**
@@ -366,39 +345,7 @@
     }, 750);
   }
 
-  /**
-   * Handles mouse scroll by moving to previous/next section.
-   * @param{event} event - mouse scroll;
-   */
-  function handleScroll(event) {
-    if (event.wheelDelta > 0 || event.detail < 0) {
-      scrollPrevious();
-    } else {
-      scrollNext();
-    }
-  }
-
-  /**
-   * Performs scroll to the next section if next section exists.
-   */
-  function scrollNext() {
-    let sections = document.querySelectorAll("section:not(.hidden)");
-    if (sectionIndex < sections.length - 1) {
-      sectionIndex += 1;
-      performScroll();
-    }
-  }
-
-  /**
-   * Performs scroll to the previous section if next section exists.
-   */
-  function scrollPrevious() {
-    if (sectionIndex > 0) {
-      sectionIndex -= 1;
-      performScroll();
-    }
-  }
-
+  
   /**
    * Scroll to the section, which index equals to sectionIndex.
    */
